@@ -26,7 +26,8 @@ namespace RPFGOAccount.Models
                         Name = "Artoria Pendragon (Alter)",
                         Level = 100,
                         ATK = 14408,
-                        HP = 16501
+                        HP = 16501,
+                        Class = "Saber"
                     },
 
                     new Character
@@ -34,7 +35,8 @@ namespace RPFGOAccount.Models
                         Name = "Circe",
                         Level = 100,
                         ATK = 11499,
-                        HP = 15853
+                        HP = 15853,
+                        Class = "Caster"
                     },
 
                     new Character
@@ -42,7 +44,8 @@ namespace RPFGOAccount.Models
                         Name = "Mochizuki Chiyome",
                         Level = 90,
                         ATK = 10403,
-                        HP = 13868
+                        HP = 13868,
+                        Class = "Assassin"
                     },
 
                     new Character
@@ -50,7 +53,17 @@ namespace RPFGOAccount.Models
                         Name = "Mash",
                         Level = 80,
                         ATK = 9520,
-                        HP = 13877
+                        HP = 13877,
+                        Class = "Shielder"
+                    },
+
+                    new Character
+                    {
+                        Name = "Altera",
+                        Level = 90,
+                        ATK = 13343,
+                        HP = 14907,
+                        Class = "Saber"
                     }
                 );
                 context.SaveChanges();

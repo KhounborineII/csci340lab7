@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RPFGOAccount.Data;
 
 namespace RPFGOAccount.Migrations
 {
     [DbContext(typeof(RPFGOAccountContext))]
-    partial class RPFGOAccountContextModelSnapshot : ModelSnapshot
+    [Migration("20211010235427_Class")]
+    partial class Class
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,9 +31,7 @@ namespace RPFGOAccount.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Class")
-                        .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("HP")
                         .HasColumnType("int");
@@ -40,9 +40,7 @@ namespace RPFGOAccount.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(60)
-                        .HasColumnType("nvarchar(60)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 

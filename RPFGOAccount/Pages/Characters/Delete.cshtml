@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id:int?}"
 @model RPFGOAccount.Pages.Characters.DeleteModel
 
 @{
@@ -35,6 +35,12 @@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Character.HP)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Character.Class)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Character.Class)
         </dd>
     </dl>
     
